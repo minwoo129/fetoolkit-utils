@@ -22,6 +22,9 @@ const num2 = at(testArr, -2); // 456
 ## API 문서
 
 - 입력 인자
-  - array: T[]
-  - at: number
+  |name|type|description|
+  |:---:|:---|:---:|
+  |array|T[]||
+  |at|number||
+
 - 반환 타입: T | undefined
