@@ -20,5 +20,7 @@ const num1 = last(testArr); // 1234
 ## API 문서
 
 - 입력 인자
-  - array: T[]
+  |name|type|description|
+  |:---:|:---|:---:|
+  |array|T[]||
 - 반환 타입: T | undefined

@@ -35,3 +35,13 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | first  | 배열의 첫번째 요소를 꺼내오는 함수                                                   | [공식문서](./src/docs/array/first.md)  |
 | last   | 배열의 마지막 요소를 꺼내오는 함수                                                   |  [공식문서](./src/docs/array/last.md)  |
 | filter | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                  | [공식문서](./src/docs/array/filter.md) |
+
+## 2. Number
+
+| 이름              | 설명                                                      |                      공식문서                      |
+| :---------------- | :-------------------------------------------------------- | :------------------------------------------------: |
+| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |  [공식문서](./src/docs/number/commaizeNumber.md)   |
+| decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        | [공식문서](./src/docs/number/decommaizeNumber.md)  |
+| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](./src/docs/number/formatPhoneNumber.md) |
+| percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](./src/docs/number/percent.md)      |
+| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./src/docs/number/sum.md)        |
