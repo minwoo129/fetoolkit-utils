@@ -45,3 +45,10 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](./src/docs/number/formatPhoneNumber.md) |
 | percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](./src/docs/number/percent.md)      |
 | sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./src/docs/number/sum.md)        |
+
+## 3. Mask
+
+| 이름            | 설명                                 |                공식문서                 |
+| :-------------- | :----------------------------------- | :-------------------------------------: |
+| maskName        | 이름을 마스킹하는 함수입니다.        | [공식문서](./src/docs/mask/maskName.md) |
+| maskPhoneNumber | 휴대폰 번호를 마스킹하는 함수입니다. | [공식문서](./src/docs/mask/maskName.md) |
