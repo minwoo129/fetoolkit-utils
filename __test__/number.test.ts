@@ -63,3 +63,10 @@ describe('number > decommaizeNumber', () => {
     expect(Number.decommaizeNumber(value)).toBe(1234567);
   });
 });
+
+describe('number > sum', () => {
+  it('합계가 정상적으로 출력되는 지 여부', () => {
+    const nums = [1, 2, 3, 4, 5];
+    expect(Number.sum(nums)).toBe(15);
+  });
+});
