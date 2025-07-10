@@ -34,11 +34,16 @@ const sum = (nums: number[]) => {
 };
 
 const percent = (num: number, denom: number, unit: number = 0) => {
-  if (num < 0 || denom <= 0) {
+  if (denom === 0) {
     return 'error';
   }
 
-  return ((num / denom) * 100).toFixed(unit);
+  const result = (num / denom) * 100;
+  if (result > 100 || result < 0) {
+    return 'error';
+  }
+
+  return result.toFixed(unit);
 };
 
 export default {
