@@ -41,3 +41,25 @@ describe('number > formatPhoneNumber', () => {
     });
   });
 });
+
+describe('number > commaizeNumber', () => {
+  it('소숫점 단위까지 존재하는 경우', () => {
+    const value = '1234567.89';
+    expect(Number.commaizeNumber(value)).toBe('1,234,567.89');
+  });
+  it('소숫점 단위가 없는 경우', () => {
+    const value = '1234567';
+    expect(Number.commaizeNumber(value)).toBe('1,234,567');
+  });
+});
+
+describe('number > decommaizeNumber', () => {
+  it('소숫점 단위까지 존재하는 경우', () => {
+    const value = '1,234,567.89';
+    expect(Number.decommaizeNumber(value)).toBe(1234567.89);
+  });
+  it('소숫점 단위가 없는 경우', () => {
+    const value = '1,234,567';
+    expect(Number.decommaizeNumber(value)).toBe(1234567);
+  });
+});
