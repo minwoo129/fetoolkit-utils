@@ -51,3 +51,21 @@ describe('array > first', () => {
     expect(Array.first(testArray2)).toBe(undefined);
   });
 });
+
+describe('array > last', () => {
+  let testArray: number[];
+  let testArray2: number[];
+
+  beforeEach(() => {
+    testArray = [1, 2, 3, 4, 5];
+    testArray2 = [];
+  });
+
+  it('배열의 마지막 요소가 반환되는지 여부', () => {
+    expect(Array.last(testArray)).toBe(testArray[testArray.length - 1]);
+  });
+
+  it('빈 배열이 들어온 경우', () => {
+    expect(Array.last(testArray2)).toBe(undefined);
+  });
+});
