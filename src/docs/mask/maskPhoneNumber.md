@@ -9,9 +9,9 @@ Mask.maskPhoneNumber(phoneNumber);
 ## 기본 사용 예시
 
 ```tsx
-import { Mask } from '@fetoolkit/utils';
+import { MaskUtils } from '@fetoolkit/utils';
 
-const { maskPhoneNumber } = Mask;
+const { maskPhoneNumber } = MaskUtils;
 
 const num1 = maskPhoneNumber('01012345678'); // 010****5678
 const num2 = maskPhoneNumber('010-1234-5678'); // 010-****-5678

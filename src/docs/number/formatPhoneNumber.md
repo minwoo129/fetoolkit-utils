@@ -9,9 +9,9 @@ Number.formatPhoneNumber(phoneNumber);
 ## 기본 사용 예시
 
 ```tsx
-import { Number } from '@fetoolkit/utils';
+import { NumberUtils } from '@fetoolkit/utils';
 
-const { formatPhoneNumber } = Number;
+const { formatPhoneNumber } = NumberUtils;
 
 const num1 = formatPhoneNumber('01012345678'); // 010-1234-5678
 const num2 = formatPhoneNumber('021234567'); // 02-123-4567
