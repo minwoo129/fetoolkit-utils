@@ -9,9 +9,9 @@ Number.decommaizeNumber(numStr);
 ## 기본 사용 예시
 
 ```tsx
-import { Number } from '@fetoolkit/utils';
+import { NumberUtils } from '@fetoolkit/utils';
 
-const { decommaizeNumber } = Number;
+const { decommaizeNumber } = NumberUtils;
 
 const num1 = decommaizeNumber('13,209,802'); // 13209802
 ```

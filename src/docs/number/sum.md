@@ -9,9 +9,9 @@ Number.sum(nums);
 ## 기본 사용 예시
 
 ```tsx
-import { Number } from '@fetoolkit/utils';
+import { NumberUtils } from '@fetoolkit/utils';
 
-const { sum } = Number;
+const { sum } = NumberUtils;
 
 const num1 = sum([1, 2, 3, 4, 5]); // 15
 ```

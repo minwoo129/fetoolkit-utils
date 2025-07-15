@@ -9,9 +9,9 @@ Mask.maskName(name);
 ## 기본 사용 예시
 
 ```tsx
-import { Mask } from '@fetoolkit/utils';
+import { MaskUtils } from '@fetoolkit/utils';
 
-const { maskName } = Mask;
+const { maskName } = MaskUtils;
 
 const name1 = maskName('홍길'); // 홍*
 const name2 = maskName('홍길동'); // 홍*동

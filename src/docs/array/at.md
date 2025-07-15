@@ -10,9 +10,9 @@ Array.at(array, at);
 ## 기본 사용 예시
 
 ```tsx
-import { Array } from '@fetoolkit/utils';
+import { ArrayUtils } from '@fetoolkit/utils';
 
-const { at } = Array;
+const { at } = ArrayUtils;
 
 const testArr = [1, 23, 578, 456, 1234];
 const num1 = at(testArr, 3); // 578

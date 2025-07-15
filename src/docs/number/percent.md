@@ -13,9 +13,9 @@ Number.percent(num, denom, unit);
 ## 기본 사용 예시
 
 ```tsx
-import { Number } from '@fetoolkit/utils';
+import { NumberUtils } from '@fetoolkit/utils';
 
-const { percent } = Number;
+const { percent } = NumberUtils;
 
 const num1 = percent(1, 3); // 33
 const num2 = percent(1, 3, 2); // 33.33

@@ -9,9 +9,9 @@ Number.commaizeNumber(value);
 ## 기본 사용 예시
 
 ```tsx
-import { Number } from '@fetoolkit/utils';
+import { NumberUtils } from '@fetoolkit/utils';
 
-const { commaizeNumber } = Number;
+const { commaizeNumber } = NumberUtils;
 
 const num1 = commaizeNumber('13209802'); // 13,209,802
 const num2 = commaizeNumber(13209802); // 13,209,802

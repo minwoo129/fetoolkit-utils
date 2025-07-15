@@ -12,9 +12,9 @@ Array.filter(array, filterBy);
 ## 기본 사용 예시
 
 ```tsx
-import { Array } from '@fetoolkit/utils';
+import { ArrayUtils } from '@fetoolkit/utils';
 
-const { filter } = Array;
+const { filter } = ArrayUtils;
 
 const testArr = [1, 23, 578, 456, 1234];
 const arr1 = filter(testArr, [0, 2, 3]); // [1, 578, 456]
