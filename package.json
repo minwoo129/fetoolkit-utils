@@ -6,6 +6,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/minwoo129/fetoolkit-utils",
+  "repository": {
+    "url": "https://github.com/minwoo129/fetoolkit-utils"
+  },
   "files": [
     "dist"
   ],
