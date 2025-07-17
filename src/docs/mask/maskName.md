@@ -3,15 +3,13 @@
 - 이름을 마스킹하는 함수입니다.
 
 ```tsx
-Mask.maskName(name);
+maskName(name);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { MaskUtils } from '@fetoolkit/utils';
-
-const { maskName } = MaskUtils;
+import { maskName } from '@fetoolkit/utils';
 
 const name1 = maskName('홍길'); // 홍*
 const name2 = maskName('홍길동'); // 홍*동

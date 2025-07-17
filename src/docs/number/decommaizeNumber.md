@@ -3,15 +3,13 @@
 - 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.
 
 ```tsx
-Number.decommaizeNumber(numStr);
+decommaizeNumber(numStr);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { NumberUtils } from '@fetoolkit/utils';
-
-const { decommaizeNumber } = NumberUtils;
+import { decommaizeNumber } from '@fetoolkit/utils';
 
 const num1 = decommaizeNumber('13,209,802'); // 13209802
 ```

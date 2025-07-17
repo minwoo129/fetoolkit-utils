@@ -6,15 +6,13 @@
   - number Array로 선언하면 그 숫자에 해당하는 index의 요소들만 필터링됩니다.
 
 ```tsx
-Array.filter(array, filterBy);
+filter(array, filterBy);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { ArrayUtils } from '@fetoolkit/utils';
-
-const { filter } = ArrayUtils;
+import { filter } from '@fetoolkit/utils';
 
 const testArr = [1, 23, 578, 456, 1234];
 const arr1 = filter(testArr, [0, 2, 3]); // [1, 578, 456]
