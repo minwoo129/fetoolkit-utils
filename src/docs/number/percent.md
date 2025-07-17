@@ -27,4 +27,4 @@ const num2 = percent(1, 3, 2); // 33.33
   |num| number |분자|
   |denom| number |분모|
   |unit| number |잘라낼 소숫점 단위<br>(default: 0)|
-- 반환 타입: number
+- 반환 타입: string
