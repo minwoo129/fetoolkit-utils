@@ -3,15 +3,13 @@
 - 휴대폰 번호를 마스킹하는 함수입니다.
 
 ```tsx
-Mask.maskPhoneNumber(phoneNumber);
+maskPhoneNumber(phoneNumber);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { MaskUtils } from '@fetoolkit/utils';
-
-const { maskPhoneNumber } = MaskUtils;
+import { maskPhoneNumber } from '@fetoolkit/utils';
 
 const num1 = maskPhoneNumber('01012345678'); // 010****5678
 const num2 = maskPhoneNumber('010-1234-5678'); // 010-****-5678

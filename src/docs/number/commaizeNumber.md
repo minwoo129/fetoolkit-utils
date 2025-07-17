@@ -3,15 +3,13 @@
 - 주어진 숫자를 콤마로 구분하는 함수입니다.
 
 ```tsx
-Number.commaizeNumber(value);
+commaizeNumber(value);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { NumberUtils } from '@fetoolkit/utils';
-
-const { commaizeNumber } = NumberUtils;
+import { commaizeNumber } from '@fetoolkit/utils';
 
 const num1 = commaizeNumber('13209802'); // 13,209,802
 const num2 = commaizeNumber(13209802); // 13,209,802

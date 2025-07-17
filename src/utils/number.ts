@@ -1,4 +1,4 @@
-const formatPhoneNumber = (phoneNumber: string) => {
+export const formatPhoneNumber = (phoneNumber: string) => {
   // 지역번호가 두자리로 시작하는 경우(서울(02)밖에 없음)
   const isSeoulNumber = phoneNumber.startsWith('02');
 
@@ -14,7 +14,7 @@ const formatPhoneNumber = (phoneNumber: string) => {
   ].join('-');
 };
 
-const commaizeNumber = (value: string | number) => {
+export const commaizeNumber = (value: string | number) => {
   const numStr = String(value);
   const decimalPointIndex = numStr.indexOf('.');
   const commaizeRegExp = /(\d)(?=(\d\d\d)+(?!\d))/g;
@@ -25,15 +25,15 @@ const commaizeNumber = (value: string | number) => {
     : numStr.replace(commaizeRegExp, '$1,');
 };
 
-const decommaizeNumber = (numStr: string) => {
+export const decommaizeNumber = (numStr: string) => {
   return Number(numStr.replace(/,/g, ''));
 };
 
-const sum = (nums: number[]) => {
+export const sum = (nums: number[]) => {
   return nums.reduce((acc, num) => acc + num, 0);
 };
 
-const percent = (num: number, denom: number, unit: number = 0) => {
+export const percent = (num: number, denom: number, unit: number = 0) => {
   if (denom === 0) {
     return 'error';
   }
@@ -44,12 +44,4 @@ const percent = (num: number, denom: number, unit: number = 0) => {
   }
 
   return result.toFixed(unit);
-};
-
-export default {
-  formatPhoneNumber,
-  commaizeNumber,
-  decommaizeNumber,
-  sum,
-  percent,
 };

@@ -7,15 +7,13 @@
     - 이 외에 값들은 모두 'error'로 반환됩니다.
 
 ```tsx
-Number.percent(num, denom, unit);
+percent(num, denom, unit);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { NumberUtils } from '@fetoolkit/utils';
-
-const { percent } = NumberUtils;
+import { percent } from '@fetoolkit/utils';
 
 const num1 = percent(1, 3); // 33
 const num2 = percent(1, 3, 2); // 33.33
@@ -29,4 +27,4 @@ const num2 = percent(1, 3, 2); // 33.33
   |num| number |분자|
   |denom| number |분모|
   |unit| number |잘라낼 소숫점 단위<br>(default: 0)|
-- 반환 타입: number
+- 반환 타입: string

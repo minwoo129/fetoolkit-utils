@@ -3,15 +3,13 @@
 - 배열에 저장된 모든 숫자들을 더하는 함수입니다.
 
 ```tsx
-Number.sum(nums);
+sum(nums);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { NumberUtils } from '@fetoolkit/utils';
-
-const { sum } = NumberUtils;
+import { sum } from '@fetoolkit/utils';
 
 const num1 = sum([1, 2, 3, 4, 5]); // 15
 ```
