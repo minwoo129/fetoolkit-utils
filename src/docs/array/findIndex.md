@@ -1,4 +1,4 @@
-# Array(find)
+# Array(findIndex)
 
 - 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수입니다.
   - 세번째 fromIndex 인자를 선언하면 해당 index에서부터 탐색을 시작합니다.
@@ -25,4 +25,4 @@ const num2 = find(testArr, (item) => item === 8); // undefined
   |array|T[]|true|탐색할 배열|
   |predicate| (item: T, index: number) => unknown |true|검사 함수|
   |fromIndex| number |false|탐색을 시작할 첫번째 index|
-- 반환 타입: T | undefined
+- 반환 타입: number | undefined

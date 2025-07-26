@@ -40,6 +40,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | count     | 배열의 길이를 반환하는 함수                                                                              |   [공식문서](./src/docs/array/count.md)   |
 | countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |  [공식문서](./src/docs/array/countBy.md)  |
 | find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](./src/docs/array/find.md)    |
+| findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 |   [공식문서](./src/docs/array/find.md)    |
 
 ## 2. Number
 

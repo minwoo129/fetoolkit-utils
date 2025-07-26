@@ -6,6 +6,7 @@ import {
   countBy,
   filter,
   find,
+  findIndex,
   first,
   last,
   objArrMap,
@@ -278,18 +279,45 @@ describe('array', () => {
       expect(result).toBe(undefined);
     });
 
-    it('findAt가 제공된 경우', () => {
+    it('fromIndex가 제공된 경우', () => {
       const result = find(testArray, (item) => item > 3, 2);
       expect(result).toBe(4);
     });
 
-    it('findAt가 제공된 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
+    it('fromIndex가 제공된 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
       const result = find(testArray, (item) => item > 10, 2);
       expect(result).toBe(undefined);
     });
 
-    it('findAt이 배열의 길이보다 큰 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
+    it('fromIndex이 배열의 길이보다 큰 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
       const result = find(testArray, (item) => item > 10, 20);
+      expect(result).toBe(undefined);
+    });
+  });
+
+  describe('findIndex', () => {
+    it('predicate가 true를 반환하는 요소가 있는 경우', () => {
+      const result = findIndex(testArray, (item) => item > 3);
+      expect(result).toBe(3);
+    });
+
+    it('predicate가 true를 반환하는 요소가 없는 경우', () => {
+      const result = findIndex(testArray, (item) => item > 10);
+      expect(result).toBe(undefined);
+    });
+
+    it('fromIndex가 제공된 경우', () => {
+      const result = findIndex(testArray, (item) => item > 3, 2);
+      expect(result).toBe(3);
+    });
+
+    it('fromIndex가 제공된 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
+      const result = findIndex(testArray, (item) => item > 10, 2);
+      expect(result).toBe(undefined);
+    });
+
+    it('fromIndex이 배열의 길이보다 큰 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
+      const result = findIndex(testArray, (item) => item > 10, 20);
       expect(result).toBe(undefined);
     });
   });
