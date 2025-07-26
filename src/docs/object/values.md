@@ -22,7 +22,7 @@ const keyArr = values(testObj); // [1, 2, 3]
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |object| T | 탐색할 객체 |
+  |name|type|requried|description|
+  |:---:|:---|:---|:---:|
+  |object| T |true| 탐색할 객체 |
 - 반환 타입: unknown[]

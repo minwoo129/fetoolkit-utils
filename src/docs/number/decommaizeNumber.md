@@ -17,7 +17,7 @@ const num1 = decommaizeNumber('13,209,802'); // 13209802
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |numStr| string||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |numStr| string|true|콤마 제거 전 숫자|
 - 반환 타입: number

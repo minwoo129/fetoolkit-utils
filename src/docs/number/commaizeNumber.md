@@ -18,7 +18,7 @@ const num2 = commaizeNumber(13209802); // 13,209,802
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |value| string \| number||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |value| string \| number|true|콤마 처리할 숫자|
 - 반환 타입: string

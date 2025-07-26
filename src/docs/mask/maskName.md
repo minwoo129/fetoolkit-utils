@@ -18,7 +18,7 @@ const name2 = maskName('홍길동'); // 홍*동
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |name| string ||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |name| string |true|마스킹할 이름|
 - 반환 타입: string

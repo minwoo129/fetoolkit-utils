@@ -29,8 +29,8 @@ forIn(testObj, (value, key) => {
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |object| T | 탐색할 객체 |
-  |iteratee| (value: T[keyof T], key: keyof T, collection: T) => any | iteratee 함수 |
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |object| T |true| 탐색할 객체 |
+  |iteratee| (value: T[keyof T], key: keyof T, collection: T) => any |true| iteratee 함수 |
 - 반환 타입: void

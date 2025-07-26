@@ -22,7 +22,7 @@ const value5 = isPositiveInteger(0); // false
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |num| number ||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |num| number |true||
 - 반환 타입: boolean

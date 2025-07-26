@@ -22,8 +22,8 @@ const value = pick(testObj, ['a', 'c']); // { a: 1, c: 3 }
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |object| T | 탐색할 객체 |
-  |keys| (K extends keyof T)[] | 포함할 key값 |
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |object| T |true| 탐색할 객체 |
+  |keys| (K extends keyof T)[] |true| 포함할 key값 |
 - 반환 타입: Pick<T, K>

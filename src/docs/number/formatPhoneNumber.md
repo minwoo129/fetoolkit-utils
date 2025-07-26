@@ -18,7 +18,7 @@ const num2 = formatPhoneNumber('021234567'); // 02-123-4567
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |phoneNumber| string ||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |phoneNumber| string |true|포맷팅할 전화번호|
 - 반환 타입: string
