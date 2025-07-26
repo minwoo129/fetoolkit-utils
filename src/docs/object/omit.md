@@ -9,14 +9,14 @@ omit(object, keys);
 ## 기본 사용 예시
 
 ```tsx
-import { values } from '@fetoolkit/utils';
+import { omit } from '@fetoolkit/utils';
 
 const testObj = {
   a: 1,
   b: 2,
   c: 3,
 };
-const value = values(testObj, ['b', 'c']); // { a: 1 }
+const value = omit(testObj, ['b', 'c']); // { a: 1 }
 ```
 
 ## API 문서
