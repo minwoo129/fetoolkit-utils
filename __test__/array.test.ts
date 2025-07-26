@@ -10,7 +10,7 @@ import {
   first,
   groupBy,
   last,
-  objArrMap,
+  mapByKey,
 } from '../src/utils/array';
 
 type TestObj = {
@@ -141,23 +141,23 @@ describe('array', () => {
     });
   });
 
-  describe('objArrMap', () => {
+  describe('mapByKey', () => {
     it('value가 number인 key인 경우', () => {
-      const result = objArrMap(testObjArray, 'id');
+      const result = mapByKey(testObjArray, 'id');
       expect(result).toStrictEqual([1, 2, 3, 4]);
       // 타입 체크: result는 number[] 타입이어야 함
       expect(typeof result[0]).toBe('number');
     });
 
     it('value가 string인 key인 경우', () => {
-      const result = objArrMap(testObjArray, 'name');
+      const result = mapByKey(testObjArray, 'name');
       expect(result).toStrictEqual(['John', 'Jane', 'Jim', 'Jill']);
       // 타입 체크: result는 string[] 타입이어야 함
       expect(typeof result[0]).toBe('string');
     });
 
     it('value가 boolean인 key인 경우', () => {
-      const result = objArrMap(testObjArray, 'isMale');
+      const result = mapByKey(testObjArray, 'isMale');
       expect(result).toStrictEqual([true, false, true, false]);
       // 타입 체크: result는 boolean[] 타입이어야 함
       expect(typeof result[0]).toBe('boolean');

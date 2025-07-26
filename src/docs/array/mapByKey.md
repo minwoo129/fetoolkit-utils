@@ -1,15 +1,15 @@
-# Array(objArrMap)
+# Array(mapByKey)
 
 - 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 해당하는 값만 매핑해서 Array로 반환하는 함수
 
 ```tsx
-objArrMap(array, key);
+mapByKey(array, key);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { objArrMap } from '@fetoolkit/utils';
+import { mapByKey } from '@fetoolkit/utils';
 
 type TestObj = {
   id: number;
@@ -40,9 +40,9 @@ const testArr = [
     isMale: false,
   },
 ];
-const num1 = objArrMap(testArr, 'id'); // [1, 2, 3, 4]
-const num2 = objArrMap(testArr, 'name'); // ['John', 'Jane', 'Jim', 'Jill']
-const num3 = objArrMap(testArr, 'isMale'); // [true, false, true, false]
+const num1 = mapByKey(testArr, 'id'); // [1, 2, 3, 4]
+const num2 = mapByKey(testArr, 'name'); // ['John', 'Jane', 'Jim', 'Jill']
+const num3 = mapByKey(testArr, 'isMale'); // [true, false, true, false]
 ```
 
 ## API 문서

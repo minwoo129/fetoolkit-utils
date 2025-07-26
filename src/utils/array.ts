@@ -48,7 +48,7 @@ export const filter = <T>(
 
 // ==========================================================================================
 
-export const objArrMap = <T extends Record<string, unknown>, K extends keyof T>(
+export const mapByKey = <T extends Record<string, unknown>, K extends keyof T>(
   arr: readonly T[],
   key: K,
 ): Array<T[K]> => {
