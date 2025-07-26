@@ -14,6 +14,8 @@ export const formatPhoneNumber = (phoneNumber: string) => {
   ].join('-');
 };
 
+// ==========================================================================================
+
 export const commaizeNumber = (value: string | number) => {
   const numStr = String(value);
   const decimalPointIndex = numStr.indexOf('.');
@@ -25,13 +27,19 @@ export const commaizeNumber = (value: string | number) => {
     : numStr.replace(commaizeRegExp, '$1,');
 };
 
+// ==========================================================================================
+
 export const decommaizeNumber = (numStr: string) => {
   return Number(numStr.replace(/,/g, ''));
 };
 
+// ==========================================================================================
+
 export const sum = (nums: number[]) => {
   return nums.reduce((acc, num) => acc + num, 0);
 };
+
+// ==========================================================================================
 
 export const percent = (num: number, denom: number, unit: number = 0) => {
   if (denom === 0) {
@@ -44,4 +52,22 @@ export const percent = (num: number, denom: number, unit: number = 0) => {
   }
 
   return result.toFixed(unit);
+};
+
+// ==========================================================================================
+
+export const isInteger = (num: number) => {
+  return Number.isInteger(num);
+};
+
+// ==========================================================================================
+
+export const isPositiveInteger = (num: number) => {
+  return isInteger(num) && num > 0;
+};
+
+// ==========================================================================================
+
+export const isNegativeInteger = (num: number) => {
+  return isInteger(num) && num < 0;
 };

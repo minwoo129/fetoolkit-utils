@@ -29,12 +29,19 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 ## 1. Array
 
-| 이름   | 설명                                                                                 |                공식문서                |
-| :----- | :----------------------------------------------------------------------------------- | :------------------------------------: |
-| at     | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원) |   [공식문서](./src/docs/array/at.md)   |
-| first  | 배열의 첫번째 요소를 꺼내오는 함수                                                   | [공식문서](./src/docs/array/first.md)  |
-| last   | 배열의 마지막 요소를 꺼내오는 함수                                                   |  [공식문서](./src/docs/array/last.md)  |
-| filter | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                  | [공식문서](./src/docs/array/filter.md) |
+| 이름      | 설명                                                                                                     |                 공식문서                  |
+| :-------- | :------------------------------------------------------------------------------------------------------- | :---------------------------------------: |
+| at        | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)                     |    [공식문서](./src/docs/array/at.md)     |
+| first     | 배열의 첫번째 요소를 꺼내오는 함수                                                                       |   [공식문서](./src/docs/array/first.md)   |
+| last      | 배열의 마지막 요소를 꺼내오는 함수                                                                       |   [공식문서](./src/docs/array/last.md)    |
+| filter    | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                                      |  [공식문서](./src/docs/array/filter.md)   |
+| mapByKey  | 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 <br>해당하는 값만 매핑해서 Array로 반환하는 함수 | [공식문서](./src/docs/array/mapByKey.md)  |
+| chunk     | 배열을 정해진 길이에 맞게 더 작은 배열로 나누는 함수                                                     |   [공식문서](./src/docs/array/chunk.md)   |
+| count     | 배열의 길이를 반환하는 함수                                                                              |   [공식문서](./src/docs/array/count.md)   |
+| countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |  [공식문서](./src/docs/array/countBy.md)  |
+| find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](./src/docs/array/find.md)    |
+| findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 | [공식문서](./src/docs/array/findIndex.md) |
+| groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |  [공식문서](./src/docs/array/groupBy.md)  |
 
 ## 2. Number
 
@@ -45,6 +52,9 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](./src/docs/number/formatPhoneNumber.md) |
 | percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](./src/docs/number/percent.md)      |
 | sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./src/docs/number/sum.md)        |
+| isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](./src/docs/number/isInteger.md)     |
+| isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./src/docs/number/isPositiveInteger.md) |
+| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./src/docs/number/isNegativeInteger.md) |
 
 ## 3. Mask
 

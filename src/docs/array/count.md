@@ -1,18 +1,18 @@
-# Array(first)
+# Array(count)
 
-- Array 내에 첫번째 요소를 반환합니다.
+- 배열의 길이를 반환하는 함수입니다.
 
 ```tsx
-first(array);
+count(array);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { first } from '@fetoolkit/utils';
+import { count } from '@fetoolkit/utils';
 
 const testArr = [1, 23, 578, 456, 1234];
-const num1 = first(testArr); // 1
+const num1 = count(testArr); // 5
 ```
 
 ## API 문서
@@ -21,4 +21,4 @@ const num1 = first(testArr); // 1
   |name|type|required|description|
   |:---:|:---|:---|:---:|
   |array|T[]|true|탐색할 배열|
-- 반환 타입: T | undefined
+- 반환 타입: number

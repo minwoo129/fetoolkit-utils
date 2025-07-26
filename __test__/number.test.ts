@@ -3,6 +3,9 @@ import {
   commaizeNumber,
   decommaizeNumber,
   formatPhoneNumber,
+  isInteger,
+  isNegativeInteger,
+  isPositiveInteger,
   percent,
   sum,
 } from '../src/utils/number';
@@ -114,5 +117,59 @@ describe('number > percent', () => {
     const denom = 300;
 
     expect(percent(num, denom, 3)).toBe('33.333');
+  });
+});
+
+describe('number > isInteger', () => {
+  it('양의 정수인 경우', () => {
+    expect(isInteger(1)).toBe(true);
+  });
+  it('음의 정수인 경우', () => {
+    expect(isInteger(-1)).toBe(true);
+  });
+  it('양의 실수인 경우', () => {
+    expect(isInteger(1.5)).toBe(false);
+  });
+  it('음의 실수인 경우', () => {
+    expect(isInteger(-3.5)).toBe(false);
+  });
+  it('0인 경우', () => {
+    expect(isInteger(0)).toBe(true);
+  });
+});
+
+describe('number > isPositiveInteger', () => {
+  it('양의 정수인 경우', () => {
+    expect(isPositiveInteger(1)).toBe(true);
+  });
+  it('음의 정수인 경우', () => {
+    expect(isPositiveInteger(-1)).toBe(false);
+  });
+  it('양의 실수인 경우', () => {
+    expect(isPositiveInteger(1.5)).toBe(false);
+  });
+  it('음의 실수인 경우', () => {
+    expect(isPositiveInteger(-3.5)).toBe(false);
+  });
+  it('0인 경우', () => {
+    expect(isPositiveInteger(0)).toBe(false);
+  });
+});
+
+describe('number > isNegativeInteger', () => {
+  it('양의 정수인 경우', () => {
+    expect(isNegativeInteger(1)).toBe(false);
+  });
+  it('음의 정수인 경우', () => {
+    expect(isNegativeInteger(-1)).toBe(true);
+  });
+  it('양의 실수인 경우', () => {
+    expect(isNegativeInteger(1.5)).toBe(false);
+  });
+  it('음의 실수인 경우', () => {
+    expect(isNegativeInteger(-3.5)).toBe(false);
+  });
+  it('0인 경우', () => {
+    expect(isNegativeInteger(0)).toBe(false);
   });
 });
