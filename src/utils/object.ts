@@ -17,3 +17,9 @@ export const forIn = <T extends Record<string, unknown>>(
 export const keys = <T extends Record<string, unknown>>(object: T) => {
   return Object.keys(object);
 };
+
+// ==========================================================================================
+
+export const values = <T extends Record<string, unknown>>(object: T) => {
+  return Object.values(object);
+};

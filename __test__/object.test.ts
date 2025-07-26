@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { forIn, keys } from '../src';
+import { forIn, keys, values } from '../src';
 
 describe('object > forIn', () => {
   let testObj: Record<string, number>;
@@ -54,5 +54,19 @@ describe('object > keys', () => {
     const result = keys(testObj);
 
     expect(result).toEqual(['a', 'b', 'c']);
+  });
+});
+
+describe('object > values', () => {
+  it('object의 value값을 배열로 반환하는지 여부', () => {
+    const testObj = {
+      a: 1,
+      b: 2,
+      c: 3,
+    };
+
+    const result = values(testObj);
+
+    expect(result).toEqual([1, 2, 3]);
   });
 });

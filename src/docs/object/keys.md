@@ -25,4 +25,4 @@ const keyArr = keys(testObj); // ['a', 'b', 'c']
   |name|type|description|
   |:---:|:---|:---:|
   |object| T | 탐색할 객체 |
-- 반환 타입: void
+- 반환 타입: string[]
