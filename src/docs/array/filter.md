@@ -22,12 +22,9 @@ const arr2 = filter(testArr, (item, index) => index % 2 === 0); // [1, 578, 1234
 ## API 문서
 
 - 입력 인자
-  - array: T[]
-  - filterBy: number[] | (item: T, index: number) => boolean
-
-  |   name   | type                                  | description |
+  | name | type | description |
   | :------: | :------------------------------------ | :---------: |
-  |  array   | T[]                                   |             |
-  | filterBy | `(item: T, index: number) => boolean` |             |
+  | array | T[] | |
+  | filterBy | `(item: T, index: number) => boolean` | |
 
 - 반환 타입: T[]

@@ -1,7 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 type FilterActionType<T> = (item: T, index: number) => boolean;
-// =============================================================
-export const at = <T>(array: T[], at: number) => {
+
+// ==========================================================================================
+
+export const at = <T>(array: readonly T[], at: number) => {
   if (array.length === 0) {
     return undefined;
   }
@@ -13,16 +15,22 @@ export const at = <T>(array: T[], at: number) => {
   return decIdx === 0 ? array[0] : array[array.length - decIdx];
 };
 
-export const first = <T>(array: T[]): T | undefined => {
+// ==========================================================================================
+
+export const first = <T>(array: readonly T[]): T | undefined => {
   return array[0];
 };
 
-export const last = <T>(array: T[]): T | undefined => {
+// ==========================================================================================
+
+export const last = <T>(array: readonly T[]): T | undefined => {
   return array[array.length - 1];
 };
 
+// ==========================================================================================
+
 export const filter = <T>(
-  array: T[],
+  array: readonly T[],
   filterBy: number[] | FilterActionType<T>,
 ) => {
   if (Array.isArray(filterBy)) {
@@ -32,9 +40,28 @@ export const filter = <T>(
   return array.filter(filterBy);
 };
 
+// ==========================================================================================
+
 export const objArrMap = <T extends Record<string, unknown>, K extends keyof T>(
-  arr: T[],
+  arr: readonly T[],
   key: K,
 ): T[K][] => {
   return arr.map((item) => item[key]);
+};
+
+// ==========================================================================================
+export const chunk = <T>(arr: readonly T[], size: number): T[][] => {
+  if (!Number.isInteger(size) || size <= 0) {
+    throw new Error('size must be a positive integer');
+  }
+
+  const chunkLength = Math.ceil(arr.length / size);
+
+  const result: T[][] = [];
+  for (let i = 0; i < chunkLength; i++) {
+    const start = i * size;
+    const end = start + size;
+    result.push(arr.slice(start, end));
+  }
+  return result;
 };
