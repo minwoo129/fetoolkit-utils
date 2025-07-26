@@ -8,6 +8,7 @@ import {
   find,
   findIndex,
   first,
+  groupBy,
   last,
   objArrMap,
 } from '../src/utils/array';
@@ -18,12 +19,18 @@ type TestObj = {
   isMale: boolean;
 };
 
+type GroupByTestObj = {
+  category: string;
+  name: string;
+};
+
 describe('array', () => {
   let testArray: number[];
   let testArray2: number[];
   let testObjArray: TestObj[];
   let chunkTestArray: number[];
   let countByTestArray: number[];
+  let groupByTestArray: GroupByTestObj[];
   beforeEach(() => {
     testArray = [1, 2, 3, 4, 5];
     testArray2 = [];
@@ -55,6 +62,14 @@ describe('array', () => {
     chunkTestArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     countByTestArray = [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    ];
+
+    groupByTestArray = [
+      { category: 'fruit', name: 'apple' },
+      { category: 'fruit', name: 'banana' },
+      { category: 'vegetable', name: 'carrot' },
+      { category: 'fruit', name: 'pear' },
+      { category: 'vegetable', name: 'broccoli' },
     ];
   });
 
@@ -319,6 +334,34 @@ describe('array', () => {
     it('fromIndex이 배열의 길이보다 큰 경우, predicate가 true를 반환하는 요소가 없는 경우', () => {
       const result = findIndex(testArray, (item) => item > 10, 20);
       expect(result).toBe(undefined);
+    });
+  });
+
+  describe('groupBy', () => {
+    it('category 프로퍼티를 기준으로 그룹화하는 경우', () => {
+      const result = groupBy(groupByTestArray, (item) => item.category);
+      expect(result).toEqual({
+        fruit: [
+          { category: 'fruit', name: 'apple' },
+          { category: 'fruit', name: 'banana' },
+          { category: 'fruit', name: 'pear' },
+        ],
+        vegetable: [
+          { category: 'vegetable', name: 'carrot' },
+          { category: 'vegetable', name: 'broccoli' },
+        ],
+      });
+    });
+
+    it('name 프로퍼티를 기준으로 그룹화하는 경우', () => {
+      const result = groupBy(groupByTestArray, (item) => item.name);
+      expect(result).toEqual({
+        apple: [{ category: 'fruit', name: 'apple' }],
+        banana: [{ category: 'fruit', name: 'banana' }],
+        carrot: [{ category: 'vegetable', name: 'carrot' }],
+        pear: [{ category: 'fruit', name: 'pear' }],
+        broccoli: [{ category: 'vegetable', name: 'broccoli' }],
+      });
     });
   });
 });
