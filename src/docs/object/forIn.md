@@ -32,5 +32,5 @@ forIn(testObj, (value, key) => {
   |name|type|description|
   |:---:|:---|:---:|
   |object| T | 탐색할 객체 |
-  |iteratee| (value: T[keyof T], key: string, collection: T) => any | iteratee 함수 |
+  |iteratee| (value: T[keyof T], key: keyof T, collection: T) => any | iteratee 함수 |
 - 반환 타입: void
