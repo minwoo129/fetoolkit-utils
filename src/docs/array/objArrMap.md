@@ -48,8 +48,8 @@ const num3 = objArrMap(testArr, 'isMale'); // [true, false, true, false]
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |array|T[]|객체를 요소로 갖는 배열|
-  |key|K|요소 객체에 적용된 프로퍼티 이름(key 값)|
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |array|T[]|true|객체를 요소로 갖는 배열|
+  |key|K|true|요소 객체에 적용된 프로퍼티 이름(key 값)|
 - 반환 타입: Array<T[K]>

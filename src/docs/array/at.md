@@ -20,9 +20,9 @@ const num2 = at(testArr, -2); // 456
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |array|T[]||
-  |at|number||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |array|T[]|true|탐색할 배열|
+  |at|number|true|원하는 요소의 인덱스|
 
 - 반환 타입: T | undefined

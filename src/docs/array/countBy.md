@@ -18,8 +18,8 @@ const num1 = countBy(testArr, (item) => (item % 2 === 0 ? 'even' : 'odd')); // {
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |array|T[]||
-  |mapper|(item: T) => PropertyKey||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |array|T[]|true|탐색할 배열|
+  |mapper|(item: T) => PropertyKey|true|분류를 위한 mapper 함수|
 - 반환 타입: Record<PropertyKey, number>

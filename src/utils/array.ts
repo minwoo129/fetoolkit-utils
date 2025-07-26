@@ -96,3 +96,32 @@ export const countBy = <T, K extends PropertyKey>(
 
   return result;
 };
+
+// ==========================================================================================
+
+export const find = <T>(
+  arr: readonly T[],
+  // eslint-disable-next-line no-unused-vars
+  predicate: (item: T, index: number) => unknown,
+  findAt?: number,
+) => {
+  let firstIndex = 0;
+
+  if (findAt) {
+    if (findAt >= arr.length) {
+      return undefined;
+    }
+
+    firstIndex = findAt < 0 ? 0 : findAt;
+  }
+
+  for (let i = firstIndex; i < arr.length; i++) {
+    if (findAt && i < findAt) {
+      continue;
+    }
+    if (predicate(arr[i], i)) {
+      return arr[i];
+    }
+  }
+  return undefined;
+};
