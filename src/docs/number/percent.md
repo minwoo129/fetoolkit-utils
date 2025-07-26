@@ -22,9 +22,9 @@ const num2 = percent(1, 3, 2); // 33.33
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |num| number |분자|
-  |denom| number |분모|
-  |unit| number |잘라낼 소숫점 단위<br>(default: 0)|
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |num| number |true|분자|
+  |denom| number |true|분모|
+  |unit| number |false|잘라낼 소숫점 단위<br>(default: 0)|
 - 반환 타입: string

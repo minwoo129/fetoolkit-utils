@@ -17,7 +17,7 @@ const num1 = sum([1, 2, 3, 4, 5]); // 15
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |nums| number[] ||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |nums| number[] |true||
 - 반환 타입: number

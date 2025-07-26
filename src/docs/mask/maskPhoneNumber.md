@@ -18,7 +18,7 @@ const num2 = maskPhoneNumber('010-1234-5678'); // 010-****-5678
 ## API 문서
 
 - 입력 인자
-  |name|type|description|
-  |:---:|:---|:---:|
-  |phoneNumber| string ||
+  |name|type|required|description|
+  |:---:|:---|:---|:---:|
+  |phoneNumber| string |true|마스킹할 전화번호|
 - 반환 타입: string
