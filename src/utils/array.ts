@@ -31,3 +31,10 @@ export const filter = <T>(
 
   return array.filter(filterBy);
 };
+
+export const objArrMap = <T extends Record<string, unknown>, K extends keyof T>(
+  arr: T[],
+  key: K,
+): T[K][] => {
+  return arr.map((item) => item[key]);
+};
