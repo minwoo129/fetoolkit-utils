@@ -71,3 +71,4 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | keys   | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |  [공식문서](./src/docs/object/keys.md)  |
 | values | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                | [공식문서](./src/docs/object/values.md) |
 | omit   | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |  [공식문서](./src/docs/object/omit.md)  |
+| pick   | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |  [공식문서](./src/docs/object/pick.md)  |
