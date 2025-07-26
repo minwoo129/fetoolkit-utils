@@ -3,6 +3,7 @@ import {
   at,
   chunk,
   count,
+  countBy,
   filter,
   first,
   last,
@@ -20,6 +21,7 @@ describe('array', () => {
   let testArray2: number[];
   let testObjArray: TestObj[];
   let chunkTestArray: number[];
+  let countByTestArray: number[];
   beforeEach(() => {
     testArray = [1, 2, 3, 4, 5];
     testArray2 = [];
@@ -49,6 +51,9 @@ describe('array', () => {
     ];
 
     chunkTestArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    countByTestArray = [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    ];
   });
 
   describe('at', () => {
@@ -228,6 +233,36 @@ describe('array', () => {
 
     it('빈 배열이 들어온 경우', () => {
       expect(count(testArray2)).toBe(0);
+    });
+  });
+
+  describe('countBy', () => {
+    it('각 요소를 키값으로 지정하는 경우', () => {
+      const result = countBy(countByTestArray, String);
+
+      expect(result).toEqual({
+        '1': 2,
+        '2': 2,
+        '3': 2,
+        '4': 2,
+        '5': 2,
+        '6': 2,
+        '7': 2,
+        '8': 2,
+        '9': 2,
+        '10': 2,
+      });
+    });
+
+    it('짝수인지 홀수인지 판별하는 경우', () => {
+      const result = countBy(countByTestArray, (item) =>
+        item % 2 === 0 ? 'even' : 'odd',
+      );
+
+      expect(result).toEqual({
+        even: 10,
+        odd: 10,
+      });
     });
   });
 });

@@ -38,6 +38,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | objArrMap | 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 <br>해당하는 값만 매핑해서 Array로 반환하는 함수 | [공식문서](./src/docs/array/objArrMap.md) |
 | chunk     | 배열을 정해진 길이에 맞게 더 작은 배열로 나누는 함수                                                     |   [공식문서](./src/docs/array/chunk.md)   |
 | count     | 배열의 길이를 반환하는 함수                                                                              |   [공식문서](./src/docs/array/count.md)   |
+| countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |  [공식문서](./src/docs/array/countBy.md)  |
 
 ## 2. Number
 
