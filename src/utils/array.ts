@@ -1,3 +1,5 @@
+import { isInteger, isPositiveInteger } from './number';
+
 // eslint-disable-next-line no-unused-vars
 type FilterActionType<T> = (item: T, index: number) => boolean;
 
@@ -7,7 +9,7 @@ export const at = <T>(array: readonly T[], at: number) => {
   if (array.length === 0) {
     return undefined;
   }
-  if (!Number.isInteger(at)) {
+  if (!isInteger(at)) {
     return undefined;
   }
 
@@ -55,7 +57,7 @@ export const objArrMap = <T extends Record<string, unknown>, K extends keyof T>(
 
 // ==========================================================================================
 export const chunk = <T>(arr: readonly T[], size: number): T[][] => {
-  if (!Number.isInteger(size) || size <= 0) {
+  if (!isPositiveInteger(size)) {
     throw new Error('size must be a positive integer');
   }
 
