@@ -1,5 +1,13 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { at, chunk, filter, first, last, objArrMap } from '../src/utils/array';
+import {
+  at,
+  chunk,
+  count,
+  filter,
+  first,
+  last,
+  objArrMap,
+} from '../src/utils/array';
 
 type TestObj = {
   id: number;
@@ -210,6 +218,16 @@ describe('array', () => {
         const result = chunk(chunkTestArray, size);
         expect(result).toStrictEqual(value);
       }
+    });
+  });
+
+  describe('count', () => {
+    it('배열의 길이가 반환되는지 여부', () => {
+      expect(count(testArray)).toBe(testArray.length);
+    });
+
+    it('빈 배열이 들어온 경우', () => {
+      expect(count(testArray2)).toBe(0);
     });
   });
 });

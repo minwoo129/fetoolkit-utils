@@ -65,3 +65,9 @@ export const chunk = <T>(arr: readonly T[], size: number): T[][] => {
   }
   return result;
 };
+
+// ==========================================================================================
+
+export const count = <T>(arr: readonly T[]) => {
+  return arr.length;
+};
