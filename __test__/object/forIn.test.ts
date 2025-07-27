@@ -1,0 +1,44 @@
+import { beforeEach, describe, expect, it } from 'vitest';
+import { forIn } from '../../src/utils/object';
+
+describe('object > forIn', () => {
+  let testObj: Record<string, number>;
+
+  beforeEach(() => {
+    testObj = {
+      a: 1,
+      b: 2,
+      c: 3,
+    };
+  });
+
+  it('object를 순회하며 각 프로퍼티의 값을 반환하는 경우', () => {
+    const result: number[] = [];
+
+    forIn(testObj, (value) => {
+      result.push(value);
+    });
+
+    expect(result).toEqual([1, 2, 3]);
+  });
+
+  it('키값에 따라 value 타입이 모두 다른경우', () => {
+    const testObj2 = {
+      a: 1,
+      b: 'test: 2',
+      c: false,
+    };
+
+    forIn(testObj2, (value, key) => {
+      if (key === 'a') {
+        expect(typeof value).toBe('number');
+      }
+      if (key === 'b') {
+        expect(typeof value).toBe('string');
+      }
+      if (key === 'c') {
+        expect(typeof value).toBe('boolean');
+      }
+    });
+  });
+});
