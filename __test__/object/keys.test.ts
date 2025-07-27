@@ -13,4 +13,17 @@ describe('object > keys', () => {
 
     expect(result).toEqual(['a', 'b', 'c']);
   });
+
+  it('상속된 문자열 키 속성을 미포함하는지 여부', () => {
+    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-explicit-any
+    function Foo(this: any) {
+      this.a = 1;
+    }
+    Foo.prototype.b = 2;
+
+    const expected = ['a'];
+    const actual = keys(new Foo()).sort();
+
+    expect(actual).toEqual(expected);
+  });
 });
