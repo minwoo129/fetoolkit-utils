@@ -2,6 +2,7 @@ export { at } from './at';
 export { chunk } from './chunk';
 export { count } from './count';
 export { countBy } from './countBy';
+export { countOf } from './countOf';
 export { filter } from './filter';
 export { find } from './find';
 export { findIndex } from './findIndex';
