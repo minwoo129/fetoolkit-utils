@@ -1,7 +1,8 @@
 name: Vitest(Unit) Tests
 on:
   pull_request:
-    branches: [master]
+    branches:
+      - 'dev-**'
 jobs:
   test:
     timeout-minutes: 60
