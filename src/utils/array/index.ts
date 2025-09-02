@@ -8,5 +8,6 @@ export { find } from './find';
 export { findIndex } from './findIndex';
 export { first } from './first';
 export { groupBy } from './groupBy';
+export { isSameArr } from './isSameArr';
 export { last } from './last';
 export { mapByKey } from './mapByKey';
