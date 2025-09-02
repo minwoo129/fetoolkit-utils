@@ -43,6 +43,8 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](./src/docs/array/find.md)    |
 | findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 | [공식문서](./src/docs/array/findIndex.md) |
 | groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |  [공식문서](./src/docs/array/groupBy.md)  |
+| isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  | [공식문서](./src/docs/array/isSameArr.md) |
+| uniqArray | 배열에 들어가있는 중복 요소를 제거한 새로운 배열을 반환하는 함수                                         | [공식문서](./src/docs/array/uniqArray.md) |
 
 ## 2. Number
 
@@ -66,10 +68,11 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 ## 4. Object
 
-| 이름   | 설명                                                           |                공식문서                 |
-| :----- | :------------------------------------------------------------- | :-------------------------------------: |
-| forIn  | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 | [공식문서](./src/docs/object/forIn.md)  |
-| keys   | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |  [공식문서](./src/docs/object/keys.md)  |
-| values | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                | [공식문서](./src/docs/object/values.md) |
-| omit   | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |  [공식문서](./src/docs/object/omit.md)  |
-| pick   | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |  [공식문서](./src/docs/object/pick.md)  |
+| 이름      | 설명                                                           |                  공식문서                  |
+| :-------- | :------------------------------------------------------------- | :----------------------------------------: |
+| forIn     | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 |   [공식문서](./src/docs/object/forIn.md)   |
+| keys      | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |   [공식문서](./src/docs/object/keys.md)    |
+| values    | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                |  [공식문서](./src/docs/object/values.md)   |
+| omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |   [공식문서](./src/docs/object/omit.md)    |
+| pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](./src/docs/object/pick.md)    |
+| isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](./src/docs/object/isSameObj.md) |
