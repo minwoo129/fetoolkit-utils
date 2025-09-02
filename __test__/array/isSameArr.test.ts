@@ -50,4 +50,11 @@ describe('array > isSameArr', () => {
 
     expect(isSameArr(arr1, arr2)).toBe(false);
   });
+
+  it('두 배열의 요소 타입이 모두 다른 경우', () => {
+    const arr1 = [1, 2, 3];
+    const arr2 = ['1', '2', '3'];
+
+    expect(isSameArr(arr1, arr2)).toBe(false);
+  });
 });
