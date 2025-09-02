@@ -7,5 +7,3 @@ export const isSameArr = (a: Array<unknown>, b: Array<unknown>) => {
 
   return true;
 };
-
-console.log(isSameArr([1, 2, 3], [1, 2, 3]));
