@@ -11,3 +11,4 @@ export { groupBy } from './groupBy';
 export { isSameArr } from './isSameArr';
 export { last } from './last';
 export { mapByKey } from './mapByKey';
+export { uniqArray } from './uniqArray';

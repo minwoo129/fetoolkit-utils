@@ -1,4 +1,4 @@
-export const isSameArr = (a: Array<unknown>, b: Array<unknown>) => {
+export const isSameArr = (a: readonly unknown[], b: readonly unknown[]) => {
   if (a.length !== b.length) return false;
 
   for (let i = 0; i < a.length; i++) {
